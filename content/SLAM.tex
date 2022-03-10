@@ -1,0 +1,9 @@
+\section{AR Core}
+\subsection{Simultane Lageschätzung und Kartenerstellung}
+Das Tracking in AR Core erfolgt über simultane Lageschätzung und Kartenerstellung (engl. Simultanous Localization and Mapping – \acrshort{slam}). Diese Methode hat ihren Ursprung in der Robotertechnik und wird für den Fall genutzt, dass keine Informationen zur Lage des Roboters im Raum und der Umgebung bekannt sind. Der Roboter sammelt über Sensoren (z.B. LiDAR) Informationen über die Umgebung und bildet daraus eine Umgebungskarte. Es werden Merkmale in der Umgebung bestimmt und deren Positionen geschätzt. Das Koordinatensystem kann hierbei frei gewählt werden, da im voraus keine Informationen zur Umgebung vorhanden sind. Meist wird die Position des Roboters für den Ursprung definiert. Gleichzeitig zur Generierung der Karte wird mithilfe der geschätzten Positionen der Merkmale eine Lageschätzung für den Roboter durchgeführt. Die Generierung der Karte und die Lageschätzung erfolgen somit simultan.\cite{slam1} \cite*[][Vgl. S.143f.]{doerner}
+
+\subsubsection{Extended Kalman Filter (EKF)-SLAM}
+\subsubsection{Extended Kalman Filter (ORB)-SLAM}
+
+\subsubsection{Visual SLAM}
+Für \acrshort{ar} Anwendungen werden Kameras für SLAM genutzt. Dies wird als visual SLAM bezeichnet.

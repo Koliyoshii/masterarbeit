@@ -1,0 +1,12 @@
+\section{Einleitung}
+%Motivation
+Durch vorangegangene Projekte sind mit photogrammetrischen Methoden 3D Modelle von historisch bedeutenden Gebäuden des SABA, des Lyautley- und des Mangin-Geländes der Stadt Villingen entstanden. Die Gebäude sind virtuell gespeichert, jedoch werden diese nicht weiter verwendet. In dieser Arbeit wird eine Augmented Reality Anwendung für Smartphones entwickelt, die eine Visualisierung der Modelle mit der AR Technologie bietet. Somit haben Bewohner der Stadt Villingen und interessierte Personen wie Touristen, die mehr über die Geschichte der Stadt Villingen erfahren möchten, zugriff auf die Modelle und können damit einen Teil der Stadtgeschichte erleben.
+
+%Aufgabenstellung/Zielsetzung/Probleme
+Die Aufgabe besteht darin eine Anwendung zu entwickeln, die zum einen die Gebäude mittels GPS vor Ort platziert. Die Gebäude werden dabei im Größenverhaltnis 1:1 dargestellt, sodass der Nutzer einen realistischen Eindruck bekommt, wie das Gebäude in Echt ausgesehen hat. Zum anderen ist es möglich die Gebäude auf jeder beliebigen horizontalen Fläche zu platzieren. Die Anwendung baut auf aktuelle AR Software Development Kits (ARCore bzw. ARKit) auf und wird mit der Game Engine Unity und AR Foundation entwickelt.
+
+Ziel ist es eine hohe Immersion bei der Nutzung zu schaffen. Das Gebäude soll nahtlos im Kamerabild dargestellt werden. So wird eine Wetter REST-API angebunden (OpenWeatherMap), um aktuelle Wetterdaten abzurufen. Daraufhin wird die Darstellung der Modelle angepasst. Bei Regen wird die Szene dunkler, Materialien werden nass dargestellt und spiegeln die Umgebung. Herrscht starker Sonnenschein, so wird die Intensität des Lichts verändert und harte Schatten geworfen.
+
+Diese Arbeit untersucht die Möglichkeiten von AR und dessen Limitierungen in einer freien Umgebung. Mit der GPS Funktionalität werden Genauigkeitsprobleme der GPS-Antennen in Smartphones untersucht.
+
+In dieser Arbeit werden zunächst einleitend theoretische Grundlagen von Augmented Reality beschrieben. Auf der technischen Seite wird das Tracking, die Algorithmen zur Erkennung von Merkmalen, GPS Systeme und die Rendering Pipeline erläutert. Anschließend wird die Umsetzung der Anwendung beschrieben, indem auf das Konzept und die Implementierung der genannten Funktionalitäten eingegangen wird. Daraufhin werden bestehende Probleme und Limitierungen, die während der Entwicklung und dem Testing vorgekommen sind, veranschaulicht. Zuletzt werden Ideen für Erweiterungen und Verbesserungen der Anwendung vorgeschlagen.

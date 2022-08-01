@@ -42,9 +42,26 @@
 \addbibresource{literatur/library.bib}
 
 \usepackage[acronym, toc, nogroupskip, nopostdot, nonumberlist]{glossaries}
-\makeglossaries
-\input{literatur/acronyms.tex}
+\usepackage[acronym]{glossaries}
+%\makeglossaries
 
+
+\newacronym{ar}{AR}{Augmented Reality}
+\newacronym[]{vr}{VR}{Virtual Reality}
+\newacronym[]{mr}{MR}{Mixed Reality}
+\newacronym[]{ve}{VE}{Virtual Environments}
+\newacronym[]{imu}{IMU}{Inertial Measurement Units}
+\newacronym[]{dof}{DOF}{Degrees of Freedom}
+\newacronym[]{sift}{SIFT}{Scale Invariant Feature Transform}
+\newacronym[]{surf}{SURF}{Speeded Up Robust Features}
+\newacronym{slam}{SLAM}{Simultaneous Localization and Mapping}
+\newacronym{Materials}{Materials}{Materials affektieren das Aussehen eines 3D Objekts mit einer oder mehrerer Texturen, Farben oder den Eigenschaften von Reflexionen}
+\newacronym{grafik-rendering-pipeline}{GRP}{Grafik-Rendering-Pipeline}
+\newacronym{frames-per-second}{FPS}{Frames Pro Sekunde}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+
+\makenoidxglossaries
 
 
 % ##################################################
@@ -111,6 +128,7 @@
 % ##################################################
 \usepackage{graphicx}                   % support for including images
 \graphicspath{{img/}}                   % default path
+\usepackage{subfig}
 
 % simple numbering without chapter
 \renewcommand{\thefigure}{\arabic{figure}}
@@ -132,9 +150,16 @@
 \pgfsetlayers{background,main,foreground}
 
 % ##################################################
-% SUPPORT FOR TEXT IN MATH EXPRESSIONS
+% MATH
 % ##################################################
 \usepackage{amstext}
+\usepackage{amsmath}
+
+\usepackage{tabularx}
+\newenvironment{conditions*}
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{${}={}$} >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
 
 % ##################################################
 % SUPPORT FOR DIRECTORY TREE RENDERING

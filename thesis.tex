@@ -16,18 +16,121 @@
 \include{framework/titlepage}   % Title page
 \include{framework/abstract}    % Abstract
 \include{framework/toc}         % Table of contents
+%\include{framework/acronyms.tex}     % List of figures, bibliography
+%\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichis]
+%\printglossary[type=\acronymtype]
+\printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichis,toctitle=Abkürzungsverzeichis]
+\clearpage
+
+% KAPITEL 1 Einleitung
+% Zielsetzung / Fragestellungen / Hintergrund
+\include{content/1Einleitung/zielsetzung.tex}
+\include{content/1Einleitung/hintergrund.tex}
 
 
-%KAPITEL 1
-\include{content/vorangegangene_projekte.tex}          % Text content
-\include{content/Ideen_kapitel.tex}          % Text content
-\include{content/kapitel1.tex}          % Text content
-\include{content/Kapitel_AR_Core.tex}          % Text content
+% KAPITEL 2 Theoretische Grundlagen / Forschungsstand
+% WICHTIG: Warum braucht der leser die Informationen, um die Arbeit zu verstehen?
+% Einordnung AR
+\input{content/2Grundlagen/einordnungAR.tex}
+% Technische Grundlagen
+\input{content/2Grundlagen/tracking.tex}
+% - Tracking
+% -- Koordinatensysteme
+% -- Kamera-basiertes Tracking
+% -- Marker-less Tracking
+% -- Algorithmen zur Erkennung von Merkmalen
+% --- SIFT
+% --- SURF
+% --- ORB
+% --- Merkmalserkennung in AR Foundation / AR Core
+% -- SLAM
+% -- SLAM in AR Foundation / AR Core
+% - GPS
+% -- GPS Genauigkeitsprobleme und Lösungen
+% - Shader
+% -- Rendering Pipeline
+% -- Schatten
+% Immersion Kriterien
+\input{content/Rendering.tex}
+% Ähnliche Arbeiten
+\input{content/Forschungsstand.tex}
 
+%KAPITEL 3 Methodik
+% Augmented Reality SDK's
+% - AR Kit
+% -- Features
+% - Vuforia
+% -- Features
+% - Wikitude
+% -- Features
+% - AR Toolkit
+% -- Features
+% - Unity & AR Foundation
+% - AR Core und AR Kit
+% -- Features
+% -- Vorteile und warum diese SDK?
+% -- Aufbau einer Szene
+% UML (Was ist UML, wofür?)
+
+%\include{content/Ideen_kapitel.tex}
+%\include{content/Kapitel_AR_Core.tex}
+
+%KAPITEL 4 Umsetzung
+% Vorbereitung Blender Modelle
+\include{content/vorbereitung_blender_modelle.tex}
+% Konzept
+% User Interface
+% Aufbau der Szenen
+% - Menü
+% - GPS
+% - Standard App
+% Implementierung von Features
+% - Plane Tracking
+% - Occlusion
+% - Light Estimation
+% Implementierung von Wetter
+% - API OpenWeatherMap Anbindung
+% - OpenWeatherMap Codes nutzen
+% -- States des Wetters
+% Lichtsetzung
+% - Sonne simulieren
+% -- Position der Sonne bestimmen
+% -- Farbtemperatur anpassen
+% Shader
+% - Shatten werfer für den Boden
+% - Outline Shader
+% - Nass Shader
+
+%KAPITEL 5 Probleme und Lösungen
+% GPS Genauigkeit
+% - Experiment GPS
+% -- GPS Daten vom Vermessungsamt im Vergleich zu Google
+% Kompass Genauigkeit
+% - Jiggle mit Filter weg
+% Mobile Limitierungen
+% - Anzahl Polygone der vorhandenen Gebäude
+% - Shader -> kein Raytracing
+% - Occlusion ohne Tiefensensor
+
+
+%KAPITEL 6 Future Work
+% Sonne nochmal anpassen
+% Occlusion mit ARKit testen
+% Tiefenkamera verwenden, um Nebel/Dunst zu simulieren
+% Blitzeinschläge simulieren
+% Partikeleffekte für Schnee (Schnee liegt auf Dach)
+% Label mit dem Namen und Infos zum Gebäude in AR
+% Benutzung der App als grundlage für andere Projekte
+% - Eigene Gebäude reinladen und mit entsprechenden Daten darstellen
+% Neumodellierung der Gebäude -> weniger Polygone -> mehr einzelne Materialien, die angepasst werden können
+
+%KAPITEL Fazit
+
+% ANHANG
+% UML Klassen Auflistung
 
 \include{content/figures}       % Example figures
 \include{framework/figures}     % List of figures, bibliography
 \include{framework/affirmation} % Eidesstattliche Erklärung 
 \printbibliography
-
 \end{document}

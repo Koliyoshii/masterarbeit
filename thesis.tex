@@ -12,6 +12,8 @@
 \input{preamble}                % Load preamble
 
 \begin{document}
+\pagestyle{scrheadings} 
+\pagenumbering{Roman}
 
 \include{framework/titlepage}   % Title page
 \include{framework/abstract}    % Abstract
@@ -22,6 +24,7 @@
 \printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichis,toctitle=Abkürzungsverzeichis]
 \clearpage
 
+\pagenumbering{arabic}
 % KAPITEL 1 Einleitung
 % Zielsetzung / Fragestellungen / Hintergrund
 \include{content/1Einleitung/zielsetzung.tex}
@@ -31,34 +34,28 @@
 % KAPITEL 2 Theoretische Grundlagen / Forschungsstand
 % WICHTIG: Warum braucht der leser die Informationen, um die Arbeit zu verstehen?
 % Einordnung AR
-\input{content/2Grundlagen/einordnungAR.tex}
-% Technische Grundlagen
-\input{content/2Grundlagen/tracking.tex}
-% - Tracking
-% -- Koordinatensysteme
-% -- Kamera-basiertes Tracking
-% -- Marker-less Tracking
-% -- Algorithmen zur Erkennung von Merkmalen
-% --- SIFT
-% --- SURF
-% --- ORB
-% --- Merkmalserkennung in AR Foundation / AR Core
-% -- SLAM
-% -- SLAM in AR Foundation / AR Core
-% - GPS
-% -- GPS Genauigkeitsprobleme und Lösungen
-% - Shader
-% -- Rendering Pipeline
-% -- Schatten
+\include{content/2Grundlagen/einordnungAR.tex}
 % Immersion Kriterien
-\input{content/Rendering.tex}
-% Ähnliche Arbeiten
-\input{content/Forschungsstand.tex}
+%\include{content/2Grundlagen/einordnungAR.tex}
+% Tracking
+\include{content/2Grundlagen/tracking.tex}
+%Rendering Pipeline und Shader
+\input{content/2Grundlagen/Rendering.tex}
+% -- Schatten
 
-%KAPITEL 3 Methodik
-% Augmented Reality SDK's
-% - AR Kit
+% Ähnliche Arbeiten
+%\input{content/Forschungsstand.tex}
+
+%KAPITEL 3 Konzept
+% Konzept
+\input{content/3Konzept/konzept.tex}
+
+%KAPITEL 4 Umsetzung
+% Vorbereitung Blender Modelle
+\include{content/vorbereitung_blender_modelle.tex}
+% - ARCore
 % -- Features
+\include{content/4TechnischeUmsetzung/arcore.tex}
 % - Vuforia
 % -- Features
 % - Wikitude
@@ -73,11 +70,7 @@
 % UML (Was ist UML, wofür?)
 
 %\include{content/Ideen_kapitel.tex}
-%\include{content/Kapitel_AR_Core.tex}
-
-%KAPITEL 4 Umsetzung
-% Vorbereitung Blender Modelle
-\include{content/vorbereitung_blender_modelle.tex}
+\include{content/4TechnischeUmsetzung/umsetzung.tex}
 % Konzept
 % User Interface
 % Aufbau der Szenen
@@ -102,6 +95,7 @@
 % - Nass Shader
 
 %KAPITEL 5 Probleme und Lösungen
+\input{content/5Probleme/probleme.tex}
 % GPS Genauigkeit
 % - Experiment GPS
 % -- GPS Daten vom Vermessungsamt im Vergleich zu Google
